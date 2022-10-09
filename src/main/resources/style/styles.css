@@ -1,0 +1,8 @@
+.root{
+    -fx-background-color: #FFF5D0;
+}
+
+.side-bar{
+    -fx-background-color: #202020;
+    -fx-background-radius: 0 15px 15px 0;
+}
