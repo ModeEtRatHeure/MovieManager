@@ -6,4 +6,6 @@ module fr.modeetratheure.moviemanager {
 
     opens fr.modeetratheure.moviemanager to javafx.fxml;
     exports fr.modeetratheure.moviemanager;
+    exports fr.modeetratheure.moviemanager.controllers to javafx.fxml;
+    opens fr.modeetratheure.moviemanager.controllers to javafx.fxml;
 }
