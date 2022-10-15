@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="fr.modeetratheure.moviemanager.controllers.MoviesFolderPickerController">
+    <Label fx:id="test" text="Choisissez le dossier où sont stockés vos films"/>
+    <HBox>
+        <TextField fx:id="entry"/>
+        <Button fx:id="browseButton" text="Browse"/>
+    </HBox>
+    <Label fx:id="errorPlaceholder"/>
+</VBox>
