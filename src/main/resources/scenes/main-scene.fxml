@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<HBox xmlns:fx="http://javafx.com/fxml" fx:controller="fr.modeetratheure.moviemanager.controllers.MainSceneController" stylesheets="@../style/styles.css">
+    <VBox styleClass="side-bar" prefWidth="100" maxWidth="110" HBox.hgrow="ALWAYS">
+        <padding>
+            <Insets right="15" left="15" top="15" bottom="15"/>
+        </padding>
+        <Label text="lgdhfslkfbvs d"/>
+    </VBox>
+    <HBox spacing="50" styleClass="menu" HBox.hgrow="ALWAYS">
+        <padding>
+            <Insets right="15" left="15" top="15" bottom="15"/>
+        </padding>
+    </HBox>
+</HBox>
