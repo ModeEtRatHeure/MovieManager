@@ -12,13 +12,9 @@ public class Helper {
     private static File logsFolder;
     private static File moviesFolder;
 
-    public static void init(){
+    public static void init() throws IOException {
         generateParentFolder();
-        try{
-            generateAppFolders();
-        }catch(IOException e){
-
-        }
+        generateAppFolders();
     }
 
     private static void generateParentFolder(){
@@ -28,15 +24,6 @@ public class Helper {
             appFolder = new File(System.getenv("AppData") + File.separator + "MovieManager");
         }else{
             appFolder = new File(System.getenv("home") + File.separator + "MovieManager");
-        }
-    }
-
-    private static void generateParentFolder(String path) throws InvalidPathException {
-        File validTest = new File(path);
-        if(validTest.isDirectory()){
-            appFolder = validTest;
-        }else{
-            throw new InvalidPathException();
         }
     }
 
