@@ -5,11 +5,18 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.control.Button?>
-<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="fr.modeetratheure.moviemanager.controllers.MoviesFolderPickerController">
+<?import javafx.geometry.Insets?>
+<VBox xmlns:fx="http://javafx.com/fxml" stylesheets="@../style/movies-folder-picker.css" spacing="5" alignment="CENTER" fx:controller="fr.modeetratheure.moviemanager.controllers.MoviesFolderPickerController">
+    <padding>
+        <Insets bottom="5" top="5" left="5" right="5"/>
+    </padding>
     <Label fx:id="test" text="Choisissez le dossier où sont stockés vos films"/>
-    <HBox>
+    <HBox alignment="CENTER" spacing="5">
         <TextField fx:id="entry"/>
         <Button fx:id="browseButton" text="Browse"/>
     </HBox>
-    <Label fx:id="errorPlaceholder"/>
+    <HBox alignment="CENTER" spacing="5">
+        <Label styleClass="error" fx:id="errorPlaceholder"/>
+        <Button fx:id="submit" text="Submit"/>
+    </HBox>
 </VBox>

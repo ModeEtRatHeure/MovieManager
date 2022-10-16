@@ -20,10 +20,17 @@ public class SceneManager {
     public static void setScene(Scenes scene) {
         FXMLLoader loader = new FXMLLoader(SceneManager.class.getClassLoader().getResource(scene.getName()));
         try {
-            stage.setScene(new Scene(loader.load(), scene.getWidth(), scene.getHeight()));
+            if(scene.getIfDimensionsAreMaxSize()){
+                stage.setResizable(false);
+                stage.setScene(new Scene(loader.load()));
+            }else{
+                stage.setResizable(true);
+                stage.setScene(new Scene(loader.load(), scene.getWidth(), scene.getHeight()));
+            }
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+        stage.centerOnScreen();
     }
 
 }

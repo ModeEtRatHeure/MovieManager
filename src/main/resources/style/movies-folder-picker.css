@@ -1,0 +1,19 @@
+.error{
+    -fx-text-fill: red;
+}
+
+.text-field:focused{
+    -fx-background-color: transparent, transparent;
+    -fx-border-color: #E0E0E0;
+}
+
+#browseButton{
+    -fx-background-color: #F0F0F0;
+    -fx-border-color: #D0D0D0;
+    -fx-border-radius: 2;
+    -fx-border-width: 1.5;
+}
+
+#submit{
+    -fx-background-color: #2080f0;
+}
