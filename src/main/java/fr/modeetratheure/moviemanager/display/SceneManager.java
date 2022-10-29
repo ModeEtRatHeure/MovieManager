@@ -1,5 +1,6 @@
 package fr.modeetratheure.moviemanager.display;
 
+import fr.modeetratheure.moviemanager.utils.Helper;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -15,6 +16,8 @@ public class SceneManager {
         stage.setTitle("MovieManager");
         stage.show();
         stage.centerOnScreen();
+        boolean test = Helper.isMoviesFolderRegistered();
+        setScene(!test ? Scenes.MOVIES_FOLDER_PICKER_SCENE : Scenes.MAIN_SCENE);
     }
 
     public static void setScene(Scenes scene) {

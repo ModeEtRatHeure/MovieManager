@@ -9,6 +9,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.DirectoryChooser;
 
+import java.io.IOException;
+
 public class MoviesFolderPickerController {
 
     @FXML
@@ -23,7 +25,7 @@ public class MoviesFolderPickerController {
     Button submit;
 
     @FXML
-    public void initialize(){
+    public void initialize() {
         System.out.println(test.getText());
         entry.setOnAction(this::submitPath);
         browseButton.setOnAction((e) -> {
@@ -35,8 +37,12 @@ public class MoviesFolderPickerController {
     }
 
     void submitPath(ActionEvent event){
-        if(!Helper.registerMoviesFolder(entry.getText())){
-            errorPlaceholder.setText("Erreur: chemin invalide");
+        try{
+            if(!Helper.registerMoviesFolder(entry.getText())){
+                errorPlaceholder.setText("Erreur: chemin invalide");
+            }
+        }catch(IOException e){
+            e.printStackTrace();
         }
     }
 }
